@@ -1,44 +1,54 @@
-# MERN
+# Vendor Management System
 
-This is a simple NodeJS + Express + React + MongoDB application. This application serves as a basic template for a mern applications.
+A web-based vendor management application built with the MERN stack.
 
-What does this application do?
--------------------------------
-This application serves a simple MERN based TODO application to demonstrate the use of MERN stack. This application uses following technologies:
-- MongoDB: used as database
-- Express: used as web application framework
-- React: used as frontend framework to build UI
-- NodeJS: used as backend server
+## Features
 
+- Manage vendor information
+- View and organize vendor records
+- React-based frontend
+- Express and Node.js backend
+- MongoDB database integration
 
-## How to run
+## Tech Stack
 
-Before running the application, make sure all dependencies are installed. 
+- **Frontend:** React, Vite
+- **Backend:** Node.js, Express
+- **Database:** MongoDB
+- **Other:** Mongoose, CORS, dotenv
 
-1. Install server & client dependencies, run following command in terminal:
-   > `npm install; cd client && npm install && cd ..`
+## Prerequisites
 
-2. Run following command to start both server and client:
-   > `npm run dev`
+- Node.js and npm
+- MongoDB database and connection URI
 
-3. Refresh the URL in simple browser to see the output.
+## Setup
 
+1. Clone or download this repository.
+2. From the project root, install the dependencies:
 
+   `npm run setup`
 
-## FAQs & Debugging
+3. Create a `.env` file in the project root and add your MongoDB connection string:
 
-### 1. Node server failing to connect to Database
+   `MONGODB_URI=your_mongodb_connection_uri`
 
-   Ensure Mongo_DB_URI is set in .env file. If not, create a new file named `.env` in root directory and add following line:
-   > `MONGO_DB_URI=<YOUR_MONGO_DB_URI>`
+4. Start the frontend and backend:
 
-   Once the studio is connected to your workspace, `MONGO_DB_URI` should be automatically set in your `.env` file.
+   `npm run dev`
 
-   Alternatively, you can create `MONGO_DB_URI` using value present in the file **.vscode/.studio/studio-env.json**.
-   MONGO_DB_URI typically looks like this:
-> `mongodb://<USERNAME>:<PASSWORD>@<HOST>:<PORT>/<DATABASE_NAME>`
+## Available Scripts
 
-### 2. Can I start server and client separately?   
-   `npm run dev` starts both server and client. If you want to start them separately, you can use following commands:
-   - `npm run server`: to start server
-   - `npm run client`: to start client
+- `npm run setup` — Install root and client dependencies.
+- `npm start` — Start the backend server.
+- `npm run dev` — Start the backend and frontend in development mode.
+
+## Project Structure
+
+- `index.js` — Backend entry point
+- `client/` — React frontend
+- `.env` — Environment variables
+
+## Note
+
+Keep your `.env` file private. Do not commit database credentials or other secrets to version control.
